@@ -1,0 +1,35 @@
+# Конфигурация сборки
+project_name: "PhotoEditor"
+version: "1.0.0"
+entry_point: "photo_editor.py"
+
+build_options:
+  onefile: true
+  windowed: true
+  icon: "icon.ico"   # необязательно; если файла нет, build.py соберёт без иконки
+
+dependencies:
+  hidden_imports:
+    - cv2
+    - PyQt6
+    - numpy
+  excludes:
+    # Модули, которые тянутся по умолчанию, но не используются приложением.
+    # ВАЖНО: numpy НЕ исключаем — он нужен OpenCV.
+    - tkinter
+    - matplotlib
+    - unittest
+    - pydoc
+    - doctest
+    - test
+    - PyQt6.QtNetwork
+    - PyQt6.QtQml
+    - PyQt6.QtQuick
+    - PyQt6.QtWebEngineWidgets
+    - PyQt6.QtMultimedia
+    - PyQt6.QtBluetooth
+    - PyQt6.QtPdf
+
+upx:
+  enabled: true
+  dir: ""   # путь к папке с upx.exe; оставьте пустым, если upx уже в PATH
