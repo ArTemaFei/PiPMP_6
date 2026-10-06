@@ -16,7 +16,7 @@ from PyQt6.QtCore import Qt
 
 
 class PhotoEditor(QMainWindow):
-    """Фоторедактор с гауссовым размытием и регулировкой радиуса."""
+    """оторедактор с гауссовым размытием и регулировкой радиуса."""
 
     def __init__(self):
         super().__init__()
